@@ -31,13 +31,6 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
-//    @Test
-//    public void useAppContext() throws Exception {
-//        // Context of the app under test.
-//        Context appContext = InstrumentationRegistry.getTargetContext();
-//
-//        assertEquals("com.example.mytest", appContext.getPackageName());
-//    }
 
     private UiDevice mUIDevice = null;
     private Context mContext = null;
@@ -58,7 +51,7 @@ public class ExampleInstrumentedTest {
     public void demo() {
         Intent myIntent = mContext.getPackageManager().getLaunchIntentForPackage(APP);  //启动app
         mContext.startActivity(myIntent);
-        mUIDevice.waitForWindowUpdate(APP, 5 * 2000);
+        mUIDevice.waitForWindowUpdate(APP, 5 * 1000);
 //        UiObject sender = mUIDevice.findObject(new UiSelector().text("Send"));  //定位text内容为Send的控键
 
         //微信内容   id   com.tencent.mm:id/c3p
